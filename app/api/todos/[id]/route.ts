@@ -5,9 +5,9 @@ import { NextResponse, NextRequest } from 'next/server'
 import * as yup from 'yup';
 
 interface Segments {
-  params: {
+  params: Promise<{
     id: string;
-  }
+  }>
 }
 
 const getTodo = async (id: string): Promise<Todo | null> => {
