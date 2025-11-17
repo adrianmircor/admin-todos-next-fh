@@ -26,10 +26,10 @@ export const serverActionsToggleTodo = async (id: string, complete: boolean): Pr
   return updateTodo;
 }
 
-export const serverActionsAddTodo = async (description: string) => {
+/* export const serverActionsAddTodo = async (description: string) => {
   try {
     const todo = await prisma.todo.create({ data: { complete: false, description } })
-    /* Cargue la ruta de nuevo, para validar que se hizo un cambio */
+    // Cargue la ruta de nuevo, para validar que se hizo un cambio
     revalidatePath('/dashboard/server-todos')
     return todo
   } catch (error) {
@@ -37,7 +37,7 @@ export const serverActionsAddTodo = async (description: string) => {
       message: 'Error creando todo'
     }
   }
-}
+} */
 
 export const serverActionsDeleteCompleted = async (): Promise<void> => {
   const user = await getUserServerSession();
